@@ -1,0 +1,28 @@
+<div class="login-container">
+
+  <mat-card class="login-mat-card">
+    <mat-card-content>
+
+      <div class="login-text">登录</div>
+      <mat-divider></mat-divider>
+      <form class="login-form">
+        <mat-form-field class="login-full-width">
+          <mat-label class="label-text">USERNAME</mat-label>
+          <input class="username" matInput placeholder="input username~" value="{{username}}">
+        </mat-form-field>
+        <mat-form-field class="login-full-width">
+          <mat-label class="label-text">PASSWORD</mat-label>
+          <input class="password" matInput placeholder="input password~" value="{{password}}">
+        </mat-form-field>
+      </form>
+      <button class="login-full-width" mat-raised-button color="primary"  (click)="login()">登录</button>
+      <div class="extra-div">
+        <button mat-button>忘记密码</button>
+        <button mat-button>免费注册</button>
+      </div>
+
+
+    </mat-card-content>
+  </mat-card>
+
+</div>

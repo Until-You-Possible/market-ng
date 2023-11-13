@@ -1,0 +1,42 @@
+.login-container {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 180px;
+  //height: 400px;
+}
+
+.login-mat-card {
+  height: inherit;
+}
+
+.login-text {
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.login-form {
+  width: 100%;
+  margin-top: 30px;
+}
+.login-full-width {
+  width: 100%;
+}
+.label-text {
+  font-size: 20px;
+}
+.username{
+  font-size: 20px;
+  padding: .6rem 0;
+}
+.password {
+  font-size: 20px;
+  padding: .6rem 0;
+}
+
+.extra-div {
+  text-align: right;
+  margin-top: 10px;
+}
