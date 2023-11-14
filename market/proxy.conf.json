@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "http://test.happymmall.com/",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "logLevel": "debug"
+  }
+}

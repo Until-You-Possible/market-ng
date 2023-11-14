@@ -32,13 +32,11 @@ export class UserApi {
   // log out
   private logOutURL           : string = "/user/logout.do";
 
-  /**
-   *  check username exists
-   * @param existsUserInfo
-   */
+  // test
+  private  testULR: string = "/cart/get_cart_product_count.do"
 
-  public checkUsernameExists(existsUserInfo: any): any {
-    return this.apiService.post(environment.basicURL + this.checkNameValidURL, existsUserInfo);
+  public checkUsernameExists(testData: any): any {
+    return this.apiService.post(environment.basicURL + "/api" + this.checkNameValidURL, testData);
   }
 
 }
