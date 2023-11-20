@@ -35,8 +35,8 @@ export class UserApi {
   // test
   private  testULR: string = "/cart/get_cart_product_count.do"
 
-  public checkUsernameExists(testData: any): any {
-    return this.apiService.post(environment.basicURL + "/api" + this.checkNameValidURL, testData);
+  public login(userData: any): any {
+    return this.apiService.post(environment.basicURL + "/api" + this.loginURL, userData);
   }
 
 }

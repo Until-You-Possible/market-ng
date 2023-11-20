@@ -12,10 +12,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatButtonModule } from "@angular/material/button";
 import { MatDividerModule } from "@angular/material/divider";
-import {MatCardModule} from "@angular/material/card";
-import {MatInputModule} from "@angular/material/input";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
-import {UserApi} from "./collectionURL/user";
+import { MatCardModule } from "@angular/material/card";
+import { MatInputModule } from "@angular/material/input";
+import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { UserApi } from "./collectionURL/user";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatIconModule } from "@angular/material/icon";
+import { MatSidenavModule } from "@angular/material/sidenav";
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import {UserApi} from "./collectionURL/user";
     MatButtonModule,
     MatCardModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule
 
   ],
   providers: [

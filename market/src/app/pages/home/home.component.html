@@ -1,3 +1,26 @@
-<!--<NavComponent></NavComponent>-->
-<p>home works!</p>
-<!--<FooterComponent></FooterComponent>-->
+<mat-toolbar>
+
+  <div class="head-container">
+    <div class="struct-left">
+      <button mat-button>登录</button>
+      <button mat-button>注册</button>
+    </div>
+    <div class="struct-right">
+      <button mat-button>购物车(00)</button>
+      <button mat-button>我的订单</button>
+      <button mat-button>关于MALL</button>
+    </div>
+  </div>
+
+</mat-toolbar>
+
+
+<div class="search-area-container">
+  <!-- 在你的组件模板文件中 -->
+  <mat-form-field appearance="outline"  class="search-input">
+    <mat-label>请输入搜索关键字</mat-label>
+    <input matInput placeholder="请输入搜索关键字">
+  </mat-form-field>
+  <button mat-raised-button color="primary">搜索</button>
+
+</div>

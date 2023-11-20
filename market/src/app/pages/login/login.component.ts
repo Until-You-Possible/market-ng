@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UserApi } from "../../collectionURL/user";
-import { HttpClient } from '@angular/common/http';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -12,29 +12,23 @@ export class LoginComponent implements OnInit {
   @Input() username! : string
   @Input() password! : string
 
-  constructor(private userApi: UserApi, private http: HttpClient) {}
+  constructor(private userApi: UserApi, private router: Router) {
+    this.username = "wg05";
+    this.password = "123456"
+  }
 
   ngOnInit(): void {
     console.log("on init")
   }
 
   login() {
-    let data = {
-      username: this.username,
-      password: this.password
-    }
-    const testData = {
-      type: "username",
-      str: "wg05"
-    }
-    const formData = new FormData();
-    formData.append('type', 'username'); // 添加参数到 FormData
-    formData.append('str', 'wg05');
-
-    this.userApi.checkUsernameExists(formData).subscribe((data: any) => {
-      console.log("xx", data);
-    })
-
+    const userFormData = new FormData();
+    userFormData.append("username", this.username);
+    userFormData.append("password", this.password);
+    this.userApi.login(userFormData).subscribe((res: any) => {
+      if (res.status === 0) {
+        this.router.navigate(["/home"])
+      }
+    });
   }
-
 }
