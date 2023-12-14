@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from "../pages/home/home.component";
-import { PageNotFoundComponent } from "../pages/page-not-found/page-not-found.component";
 import {LoginComponent} from "../pages/login/login.component";
+import {TestComponent} from "../pages/test/test.component";
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
+  // {
+  //   path: '',
+  //   redirectTo: '/home',
+  //   pathMatch: 'full'
+  // },
   {
     path: "home",
     component: HomeComponent
@@ -20,8 +20,8 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: '**',
-    component: PageNotFoundComponent
+    path: 'test',
+    component : TestComponent
   }
 ];
 

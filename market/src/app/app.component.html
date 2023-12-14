@@ -1,24 +1,24 @@
 
 <!--<router-outlet></router-outlet>-->
-<mat-toolbar>
-  <button mat-icon-button>
-    <mat-icon (click)="this.sideNav.open()" *ngIf="!sideNav.opened" class="mat-18">menu</mat-icon>
-    <mat-icon (click)="this.sideNav.close()" *ngIf="sideNav.opened"  class="mat-18">close</mat-icon>
-    <span class="ml-4">My Application</span>
-  </button>
-</mat-toolbar>
+<!--<mat-toolbar>-->
+<!--  <button mat-icon-button>-->
+<!--    <mat-icon (click)="this.sideNav.open()" *ngIf="!sideNav.opened" class="mat-18">menu</mat-icon>-->
+<!--    <mat-icon (click)="this.sideNav.close()" *ngIf="sideNav.opened"  class="mat-18">close</mat-icon>-->
+<!--    <span class="ml-4">My Application</span>-->
+<!--  </button>-->
+<!--</mat-toolbar>-->
 
-<mat-sidenav-container style="height: 100vh;">
-   <mat-sidenav #sideNav="matSidenav">
-     <img src="" alt="" class="avatar mat-elevation-z8">
-     <h4>Let's Program</h4>
-     <mat-divider></mat-divider>
-     <button mat-button class="menu-button">
-       <mat-icon>event_note</mat-icon>
-       <span>ABC Newspaper</span>
-     </button>
-   </mat-sidenav>
-  <mat-sidenav-content>
+<!--<mat-sidenav-container style="height: 100vh;">-->
+<!--   <mat-sidenav #sideNav="matSidenav">-->
+<!--     <img src="" alt="" class="avatar mat-elevation-z8">-->
+<!--     <h4>Let's Program</h4>-->
+<!--     <mat-divider></mat-divider>-->
+<!--     <button mat-button class="menu-button">-->
+<!--       <mat-icon>event_note</mat-icon>-->
+<!--       <span>ABC Newspaper</span>-->
+<!--     </button>-->
+<!--   </mat-sidenav>-->
+<!--  <mat-sidenav-content>-->
 
 <!--    <section class="text-gray-600 bg-gray-100 body-font">-->
 <!--      <div class="container px-5  mx-auto max-w-7x1">-->
@@ -47,5 +47,11 @@
 <!--        </div>-->
 <!--      </div>-->
 <!--    </section>-->
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<!--  </mat-sidenav-content>-->
+<!--</mat-sidenav-container>-->
+
+<mat-grid-list [cols]="cols" rowHeight="200px" gutterSize="20px">
+  <mat-grid-tile *ngFor="let data of dataList">
+    <app-card [data]="data"></app-card>
+  </mat-grid-tile>
+</mat-grid-list>
