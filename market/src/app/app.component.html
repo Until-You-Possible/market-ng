@@ -52,6 +52,6 @@
 
 <mat-grid-list [cols]="cols" rowHeight="200px" gutterSize="20px">
   <mat-grid-tile *ngFor="let data of dataList">
-    <app-card [data]="data"></app-card>
+    <app-card [data]="data" (cardClicked)="onCardClick($event)"></app-card>
   </mat-grid-tile>
 </mat-grid-list>

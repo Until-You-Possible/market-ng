@@ -31,6 +31,10 @@ export class AppComponent implements AfterViewInit, OnInit {
     }
   }
 
+  onCardClick(data: any) {
+    console.log("data",data);
+  }
+
   ngOnInit(): void {
 
     this.breakpointObserver.observe([Breakpoints.Large, Breakpoints.Medium, Breakpoints.Small])
